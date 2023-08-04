@@ -1,0 +1,121 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+:root {
+  --bg-color-dark: #1A2836;
+  --accent-color: #F05D5D;
+  --font-color-dark: #DDDDDD;
+}
+
+body {
+  background-color: var(--bg-color-dark);
+  color: var(--font-color-dark);
+}
+
+a, a:visited, a:focus {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+h1 {
+  color: var(--accent-color);
+}
+
+.subtitle-container {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.subtitle-container h4 {
+  color: var(--accent-color);
+}
+
+.subtitle-container span {
+  flex-grow: 1;
+  border-top: 1px solid var(--font-color-dark);
+}
+
+/* Navbar section */
+nav {
+  background: var(--bg-color-dark);
+  padding-right: 3rem;
+  /* position: sticky;
+  top: 0; */
+  width: 100%;
+}
+
+nav ul {
+  height: 120px;
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  justify-content: end;
+  align-items: center;
+}
+
+nav a {
+  color: var(--font-color-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--accent-color);
+}
+
+#main-container {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  max-width: 616px;
+}
+
+section {
+  margin-bottom: 5rem;
+}
+
+/* Home section */
+.home-carrousel {
+  color: var(--accent-color);
+}
+
+.gh-btn {
+  margin-top: 2rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+
+  display: flex;
+  gap: 1rem;
+  width: fit-content;
+}
