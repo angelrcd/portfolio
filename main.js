@@ -1,3 +1,2 @@
-import { initProjectCard } from "./modules/projectCard";
-
-initProjectCard()
+import { initProjectCards } from "./modules/projectCard";
+initProjectCards();
