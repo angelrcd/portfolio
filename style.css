@@ -15,7 +15,7 @@ body {
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
-}
+}CV - Angel Romero Cesteros
 input, button, textarea, select {
   font: inherit;
 }
@@ -26,10 +26,16 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --bg-color-dark: #1A2836;
   --accent-color: #F05D5D;
   --font-color-dark: #DDDDDD;
+
+  --nav-height: 120px;
 }
 
 body {
@@ -38,9 +44,7 @@ body {
 }
 
 a, a:visited, a:focus {
-  color: var(--accent-color);
   text-decoration: none;
-  font-weight: 600;
 }
 
 h1 {
@@ -51,9 +55,11 @@ h1 {
   display: flex;
   gap: 0.8rem;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
-.subtitle-container h4 {
+.subtitle-container h3 {
+  font-size: 1.5rem;
   color: var(--accent-color);
 }
 
@@ -66,13 +72,13 @@ h1 {
 nav {
   background: var(--bg-color-dark);
   padding-right: 3rem;
-  /* position: sticky;
-  top: 0; */
+  position: sticky;
+  top: 0;
   width: 100%;
 }
 
 nav ul {
-  height: 120px;
+  height: var(--nav-height);
   list-style: none;
   display: flex;
   gap: 3rem;
@@ -97,11 +103,12 @@ nav a:focus {
 }
 
 main {
-  max-width: 616px;
+  max-width: 800px;
+  margin: 0 1rem;
 }
 
-section {
-  margin-bottom: 5rem;
+section .subtitle-container:first-child{
+  padding-top: var(--nav-height);
 }
 
 /* Home section */
@@ -111,11 +118,113 @@ section {
 
 .gh-btn {
   margin-top: 2rem;
+  color: var(--accent-color);
+  font-weight: 600;
   border: 1px solid var(--accent-color);
   border-radius: 10px;
-  padding: 0.8rem 1rem;
+  padding: 1rem 1rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 
   display: flex;
   gap: 1rem;
   width: fit-content;
+}
+
+/* Projects */
+
+.projects-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.project-card {
+  height: 400px;
+  max-width: 350px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.project-card img {
+  min-height: 60%;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.project-card .project-info {
+  background: #0c131a;
+  padding: 1rem;
+  height: 40%;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.project-info h5 {
+  color: var(--accent-color);
+  font-size: 1.25rem;
+}
+
+.project-info p {
+  font-size: 0.95rem;
+}
+
+.show-card {
+  cursor: pointer;
+}
+
+h5.show-card:hover {
+  text-decoration: underline;
+}
+
+.card-reveal {
+  position: absolute;
+  top: 0;
+  background-color: #0c131a;
+  height: 400px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 5px;
+  transform: translateY(100px);
+  z-index: -1;
+  opacity: 0%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+
+.project-card.revealed .card-reveal {
+  transform: translateY(0px);
+  z-index: 1;
+  opacity: 100%;
+}
+
+.card-reveal svg {
+  color: var(--accent-color);
+}
+
+.close-card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.close-card-container p {
+  color: var(--accent-color);
+  font-size: 1.25rem;
+}
+
+.close-button {
+  cursor: pointer;
+}
+
+.project-links-container {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
 }
