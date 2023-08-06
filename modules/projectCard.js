@@ -2,7 +2,7 @@ const projects = [
   {
     name: "Project Name",
     description: "Description",
-    imageUrl: "/assets/code.jpg",
+    imageUrl: "assets/code.jpg",
     details: [
       "Detail 1",
       "Detail 2",
@@ -16,7 +16,7 @@ const projects = [
   {
     name: "Project Name 2",
     description: "2",
-    imageUrl: "/assets/code.jpg",
+    imageUrl: "assets/code.jpg",
     details: [
       "Detail 1",
     ],

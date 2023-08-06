@@ -4,35 +4,35 @@ const skills = [
     skills: [
       {
         name: "HTML5",
-        iconUrl: "/assets/skill-icons/html.svg"
+        iconUrl: "assets/skill-icons/html.svg"
       },
       {
         name: "CSS3",
-        iconUrl: "/assets/skill-icons/css.svg"
+        iconUrl: "assets/skill-icons/css.svg"
       },
       {
         name: "Javascript",
-        iconUrl: "/assets/skill-icons/javascript.svg"
+        iconUrl: "assets/skill-icons/javascript.svg"
       },
       {
         name: "React",
-        iconUrl: "/assets/skill-icons/react.svg"
+        iconUrl: "assets/skill-icons/react.svg"
       },
       {
         name: "Tailwind",
-        iconUrl: "/assets/skill-icons/tailwind.svg"
+        iconUrl: "assets/skill-icons/tailwind.svg"
       },
       {
         name: "NodeJS",
-        iconUrl: "/assets/skill-icons/nodejs.svg"
+        iconUrl: "assets/skill-icons/nodejs.svg"
       },
       {
         name: "Express",
-        iconUrl: "/assets/skill-icons/express.svg"
+        iconUrl: "assets/skill-icons/express.svg"
       },
       {
         name: "Bootstrap",
-        iconUrl: "/assets/skill-icons/bootstrap.svg"
+        iconUrl: "assets/skill-icons/bootstrap.svg"
       }
     ]
   },
@@ -41,19 +41,19 @@ const skills = [
     skills: [
       {
         name: "C#",
-        iconUrl: "/assets/skill-icons/csharp.svg"
+        iconUrl: "assets/skill-icons/csharp.svg"
       },
       {
         name: ".NET Core",
-        iconUrl: "/assets/skill-icons/netcore.svg"
+        iconUrl: "assets/skill-icons/netcore.svg"
       },
       {
         name: "Visual Studio",
-        iconUrl: "/assets/skill-icons/visualstudio.svg"
+        iconUrl: "assets/skill-icons/visualstudio.svg"
       },
       {
         name: "ASP.NET Core",
-        iconUrl: "/assets/skill-icons/aspnet.png"
+        iconUrl: "assets/skill-icons/aspnet.png"
       }
     ]
   },
@@ -62,19 +62,19 @@ const skills = [
     skills: [
       {
         name: "MongoDB",
-        iconUrl: "/assets/skill-icons/mongodb.svg"
+        iconUrl: "assets/skill-icons/mongodb.svg"
       },
       {
         name: "Microsoft SQL Server",
-        iconUrl: "/assets/skill-icons/mssql.png"
+        iconUrl: "assets/skill-icons/mssql.png"
       },
       {
         name: "MySQL",
-        iconUrl: "/assets/skill-icons/mysql.svg"
+        iconUrl: "assets/skill-icons/mysql.svg"
       },
       {
         name: "CosmosDB",
-        iconUrl: "/assets/skill-icons/cosmosdb.png"
+        iconUrl: "assets/skill-icons/cosmosdb.png"
       }
     ]
   },
@@ -83,35 +83,35 @@ const skills = [
     skills: [
       {
         name: "Azure",
-        iconUrl: "/assets/skill-icons/azure.svg"
+        iconUrl: "assets/skill-icons/azure.svg"
       },
       {
         name: "Linux",
-        iconUrl: "/assets/skill-icons/linux.svg"
+        iconUrl: "assets/skill-icons/linux.svg"
       },
       {
         name: "Bash",
-        iconUrl: "/assets/skill-icons/bash.svg"
+        iconUrl: "assets/skill-icons/bash.svg"
       },
       {
         name: "NPM",
-        iconUrl: "/assets/skill-icons/npm.png"
+        iconUrl: "assets/skill-icons/npm.png"
       },
       {
         name: "Git",
-        iconUrl: "/assets/skill-icons/git.svg"
+        iconUrl: "assets/skill-icons/git.svg"
       },
       {
         name: "Github",
-        iconUrl: "/assets/skill-icons/github.svg"
+        iconUrl: "assets/skill-icons/github.svg"
       },
       {
         name: "Docker",
-        iconUrl: "/assets/skill-icons/docker.png"
+        iconUrl: "assets/skill-icons/docker.png"
       },
       {
         name: "Nginx",
-        iconUrl: "/assets/skill-icons/nginx.svg"
+        iconUrl: "assets/skill-icons/nginx.svg"
       },
 
     ]
@@ -121,27 +121,27 @@ const skills = [
     skills: [
       {
         name: "Vite",
-        iconUrl: "/assets/skill-icons/vite.svg"
+        iconUrl: "assets/skill-icons/vite.svg"
       },
       {
         name: "Webpack",
-        iconUrl: "/assets/skill-icons/webpack.svg"
+        iconUrl: "assets/skill-icons/webpack.svg"
       },
       {
         name: "Vitest",
-        iconUrl: "/assets/skill-icons/vitest.svg"
+        iconUrl: "assets/skill-icons/vitest.svg"
       },
       {
         name: "Jest",
-        iconUrl: "/assets/skill-icons/jest.svg"
+        iconUrl: "assets/skill-icons/jest.svg"
       },
       {
         name: "Testing library",
-        iconUrl: "/assets/skill-icons/testinglibrary.png"
+        iconUrl: "assets/skill-icons/testinglibrary.png"
       },
       {
         name: "Figma",
-        iconUrl: "/assets/skill-icons/figma.svg"
+        iconUrl: "assets/skill-icons/figma.svg"
       }
     ]
   }
