@@ -295,3 +295,33 @@ h5.show-card:hover {
   height: 48px;
   align-self: flex-end;
 }
+
+/* Contact */
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 3rem;
+}
+
+.contact-container a {
+  height: 5rem;
+  width: 5rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition-property: all;
+  transition-duration: 0.4s;
+}
+
+.contact-container a:hover {
+  transform: scale(1.1);
+}
+
+.contact-container svg {
+  height: 2rem;
+  color: var(--accent-color);
+}
