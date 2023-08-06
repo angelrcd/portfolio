@@ -71,19 +71,40 @@ h1 {
 /* Navbar section */
 nav {
   background: var(--bg-color-dark);
-  padding-right: 3rem;
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 100;
 }
 
 nav ul {
-  height: var(--nav-height);
   list-style: none;
   display: flex;
   gap: 3rem;
   justify-content: end;
   align-items: center;
+}
+
+nav ul li:last-child {
+  margin-right: 3rem;
+}
+
+nav.big-nav ul {
+  height: var(--nav-height);
+
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+
+nav.small-nav ul {
+  height: fit-content;
+  border-bottom: 1px solid var(--font-color-dark);
+  padding: 0.5rem 0;
+
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
 }
 
 nav a {
@@ -112,7 +133,9 @@ section .subtitle-container:first-child{
 }
 
 /* Home section */
-.home-carrousel {
+.typewriter-effect {
+  font-size: 1.5rem;
+  font-weight: 600;
   color: var(--accent-color);
 }
 
@@ -253,6 +276,7 @@ h5.show-card:hover {
 }
 
 .skill-group ul {
+  padding: 0;
   list-style: none;
   display: flex;
   justify-content: space-around;
