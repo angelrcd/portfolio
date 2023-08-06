@@ -228,3 +228,47 @@ h5.show-card:hover {
   display: flex;
   gap: 1rem;
 }
+
+/* Skills */
+
+.skill-groups-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.skill-group {
+  flex-grow: 1;
+  max-width: 380px;
+  text-align: center;
+  background-color: #0c131a;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.skill-group h4 {
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.skill-group ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.skill-group li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-group li img {
+  height: 48px;
+  align-self: flex-end;
+}

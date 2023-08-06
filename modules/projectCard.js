@@ -12,6 +12,18 @@ const projects = [
       access: "",
       github: ""
     }
+  },
+  {
+    name: "Project Name 2",
+    description: "2",
+    imageUrl: "/assets/code.jpg",
+    details: [
+      "Detail 1",
+    ],
+    link: {
+      access: "",
+      github: ""
+    }
   }
 ]
 
@@ -77,6 +89,6 @@ function drawProjectCards(projects){
     </div>
   </div>
     `
-    projectCardContainer.appendChild(projectElem)
+    projectCardContainer.appendChild(projectElem);
   })
 }
