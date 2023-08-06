@@ -133,7 +133,6 @@ section .subtitle-container:first-child{
 /* Projects */
 
 .projects-container {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -141,6 +140,7 @@ section .subtitle-container:first-child{
 }
 
 .project-card {
+  position: relative;
   height: 400px;
   max-width: 350px;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
