@@ -5,6 +5,31 @@ const homeNavButton = document.querySelector("#home-btn");
 const nav = document.querySelector("nav");
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('nav a');
+const hamburguerButton = document.querySelector(".hamburguer-button");
+const backdrop = document.querySelector(".mobile-backdrop");
+
+// Mobile navbar
+hamburguerButton.addEventListener("click", () => {
+  const menu = document.querySelector("nav ul");
+  menu.classList.toggle("mobile-active");
+  backdrop.classList.toggle("active");
+})
+
+backdrop.addEventListener("click", () => {
+  const menu = document.querySelector("nav ul");
+  menu.classList.toggle("mobile-active");
+  backdrop.classList.toggle("active");
+})
+
+navLinks.forEach(navLink => {
+  navLink.addEventListener("click", () => {
+    if (backdrop.classList.contains("active")){
+      const menu = document.querySelector("nav ul");
+      menu.classList.toggle("mobile-active");
+      backdrop.classList.toggle("active");
+    }
+  })
+})
 
 // Home button in navbar take you to the top of the page
 homeNavButton.addEventListener("click", () => {
