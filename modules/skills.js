@@ -23,16 +23,16 @@ const skills = [
         iconUrl: "assets/skill-icons/tailwind.svg"
       },
       {
+        name: "Bootstrap",
+        iconUrl: "assets/skill-icons/bootstrap.svg"
+      },
+      {
         name: "NodeJS",
         iconUrl: "assets/skill-icons/nodejs.svg"
       },
       {
         name: "Express",
         iconUrl: "assets/skill-icons/express.svg"
-      },
-      {
-        name: "Bootstrap",
-        iconUrl: "assets/skill-icons/bootstrap.svg"
       }
     ]
   },
