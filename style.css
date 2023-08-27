@@ -38,6 +38,10 @@ html {
   --nav-height: 50px;
 }
 
+*:focus {
+  outline: 3px solid var(--accent-color) !important;
+}
+
 body {
   background-color: var(--bg-color-dark);
   color: var(--font-color-dark);
@@ -276,7 +280,7 @@ h5.show-card:hover {
   z-index: -1;
   opacity: 0%;
 
-  display: flex;
+  visibility: hidden;
   flex-direction: column;
   justify-content: space-between;
 
@@ -286,6 +290,7 @@ h5.show-card:hover {
 }
 
 .project-card.revealed .card-reveal {
+  visibility: visible;
   transform: translateY(0px);
   z-index: 1;
   opacity: 100%;
@@ -309,6 +314,8 @@ h5.show-card:hover {
 }
 
 .close-button {
+  background: none;
+  border: none;
   cursor: pointer;
 }
 
@@ -380,7 +387,7 @@ h5.show-card:hover {
   justify-content: center;
   align-items: center;
 
-  transition-property: all;
+  transition-property: transform;
   transition-duration: 0.4s;
 }
 

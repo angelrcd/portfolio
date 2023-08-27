@@ -8,6 +8,9 @@ const navLinks = document.querySelectorAll('nav a');
 const hamburguerButton = document.querySelector(".hamburguer-button");
 const backdrop = document.querySelector(".mobile-backdrop");
 
+initProjectCards();
+drawSkills();
+
 // Mobile navbar
 hamburguerButton.addEventListener("click", () => {
   const menu = document.querySelector("nav ul");
@@ -90,7 +93,3 @@ function isPageScrolledToBottom() {
   // Check if the sum of current scroll position and visible height is close to the total height
   return Math.abs(scrollableHeight - (currentScrollPosition + windowHeight)) <= 1;
 }
-
-
-initProjectCards();
-drawSkills();

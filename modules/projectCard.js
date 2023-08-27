@@ -124,6 +124,17 @@ export function initProjectCards(){
       projectCardToHide.classList.remove("revealed")
     })
   })
+
+  // Project cards keyboard controls when focused
+  const projectCards = document.querySelectorAll(".project-card");
+  projectCards.forEach(projectCard => {
+    projectCard.addEventListener('keydown', (e) => {
+      if (e.key === ' ' || e.key === 'Enter'){
+        const projectCardToReveal = e.target.closest(".project-card");
+      projectCardToReveal.classList.add("revealed")
+      }
+    })
+  })
 }
 
 function drawProjectCards(projects){
@@ -139,7 +150,7 @@ function drawProjectCards(projects){
     }
 
     projectElem.innerHTML = `
-    <div class="project-card">
+    <div tabindex='0' class="project-card">
     <img class="show-card" src="${project.imageUrl}" alt="">
     <div class="project-info">
       <h5 class="show-card">${project.name}</h5>
@@ -149,9 +160,9 @@ function drawProjectCards(projects){
       <div>
         <div class="close-card-container">
           <p>${project.name}</p>
-          <span class="close-button">
+          <button class="close-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
-          </span>
+          </button>
         </div>
         <ul>
           ${detailsList}
