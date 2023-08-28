@@ -219,6 +219,7 @@ section .subtitle-container:first-child{
 /* Projects */
 
 .projects-container {
+  padding-left: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -328,6 +329,8 @@ h5.show-card:hover {
 /* Skills */
 
 .skill-groups-container {
+  padding-left: 0;
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -357,7 +360,7 @@ h5.show-card:hover {
   gap: 1.5rem;
 }
 
-.skill-group li {
+.skill-group li figure{
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -367,12 +370,13 @@ h5.show-card:hover {
 
 .skill-group li img {
   height: 48px;
-  align-self: flex-end;
 }
 
 /* Contact */
 
 .contact-container {
+  padding-left: 0;
+  list-style: none;
   display: flex;
   justify-content: space-around;
   padding-bottom: 3rem;

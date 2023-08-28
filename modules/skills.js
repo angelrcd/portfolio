@@ -150,7 +150,7 @@ const skills = [
 export function drawSkills(){
   const skillsGroupContainer = document.querySelector(".skill-groups-container");
   skills.forEach(skillGroup => {
-    const skillGroupElem = document.createElement("div");
+    const skillGroupElem = document.createElement("li");
     skillGroupElem.classList.add("skill-group");
 
     let skillsListText = "";
@@ -158,8 +158,10 @@ export function drawSkills(){
     for (let skill of skillGroup.skills){
       skillsListText += `
       <li>
-        <div><img src="${skill.iconUrl}" alt="${skill.name} logo"></div>
-        <figcaption>${skill.name}</figcaption>
+        <figure>
+          <img src="${skill.iconUrl}" alt="${skill.name}">
+          <figcaption>${skill.name}</figcaption>
+        </figure>
       </li>
       `
     }

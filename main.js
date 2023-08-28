@@ -13,6 +13,8 @@ drawSkills();
 
 // Mobile navbar
 hamburguerButton.addEventListener("click", () => {
+  const toggleExpandedValue = hamburguerButton.getAttribute("aria-expanded") === 'false' ? 'true' : 'false';
+  hamburguerButton.setAttribute("aria-expanded", toggleExpandedValue)
   const menu = document.querySelector("nav ul");
   menu.classList.toggle("mobile-active");
   backdrop.classList.toggle("active");

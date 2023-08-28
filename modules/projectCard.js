@@ -114,14 +114,14 @@ export function initProjectCards(){
   showCardInputs.forEach(showCardInput =>{
     showCardInput.addEventListener("click", (e) => {
       const projectCardToReveal = e.target.closest(".project-card");
-      projectCardToReveal.classList.add("revealed")
+        revealCardDetails(projectCardToReveal);
     })
   })
 
   hideCardInputs.forEach(hideCardInput => {
     hideCardInput.addEventListener("click", (e) => {
       const projectCardToHide = e.target.closest(".project-card");
-      projectCardToHide.classList.remove("revealed")
+      hideCardDetails(projectCardToHide);
     })
   })
 
@@ -131,17 +131,29 @@ export function initProjectCards(){
     projectCard.addEventListener('keydown', (e) => {
       if (e.key === ' ' || e.key === 'Enter'){
         const projectCardToReveal = e.target.closest(".project-card");
-      projectCardToReveal.classList.add("revealed")
+        revealCardDetails(projectCardToReveal);
       }
     })
   })
 }
 
+function revealCardDetails(projectCard){
+  projectCard.classList.add("revealed");
+  projectCard.ariaExpanded = true;
+}
+
+function hideCardDetails(projectCard){
+  projectCard.classList.remove("revealed")
+  projectCard.ariaExpanded = false;
+}
+
 function drawProjectCards(projects){
   const projectCardContainer = document.querySelector(".projects-container");
   projects.forEach(project => {
-    const projectElem = document.createElement("div");
+    const projectElem = document.createElement("li");
     projectElem.classList.add("project-card");
+    projectElem.tabIndex = 0;
+    projectElem.ariaExpanded = false;
 
     let detailsList = "";
 
@@ -150,12 +162,12 @@ function drawProjectCards(projects){
     }
 
     projectElem.innerHTML = `
-    <div tabindex='0' class="project-card">
+
     <img class="show-card" src="${project.imageUrl}" alt="">
     <div class="project-info">
       <h5 class="show-card">${project.name}</h5>
       <p>${project.description}</p>
-    </div>
+    </div>  
     <div class="card-reveal">
       <div>
         <div class="close-card-container">
@@ -177,7 +189,7 @@ function drawProjectCards(projects){
         </a>
       </div>
     </div>
-  </div>
+
     `
     projectCardContainer.appendChild(projectElem);
   })
