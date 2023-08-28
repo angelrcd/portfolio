@@ -159,7 +159,7 @@ export function drawSkills(){
       skillsListText += `
       <li>
         <figure>
-          <img src="${skill.iconUrl}" alt="${skill.name}">
+          <img src="${skill.iconUrl}" alt="">
           <figcaption>${skill.name}</figcaption>
         </figure>
       </li>

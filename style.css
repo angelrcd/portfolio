@@ -252,7 +252,7 @@ section .subtitle-container:first-child{
   border-radius: 0px 0px 5px 5px;
 }
 
-.project-info h5 {
+.project-info h4 {
   color: var(--accent-color);
   font-size: 1.25rem;
 }
@@ -265,7 +265,7 @@ section .subtitle-container:first-child{
   cursor: pointer;
 }
 
-h5.show-card:hover {
+h4.show-card:hover {
   text-decoration: underline;
 }
 
@@ -282,6 +282,7 @@ h5.show-card:hover {
   opacity: 0%;
 
   visibility: hidden;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 
