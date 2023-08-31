@@ -61,8 +61,7 @@ window.addEventListener("scroll", () => {
         if (pageYOffset >= sectionTop - sectionHeight / 3) {
             currentSection = section.getAttribute('id');
         }
-  })
-
+  })  
   // Remove the 'active' class from all nav links
   navLinks.forEach(link => {
     link.classList.remove('active');
@@ -74,12 +73,15 @@ window.addEventListener("scroll", () => {
     return;
   }
 
-  if(currentSection === "home"){
+  if(isPageScrolledToTop()){
     const activeLink = document.querySelector("nav a:first-child");
     activeLink.classList.add('active');
     return;
   }
 
+  if(currentSection === "home"){
+    currentSection = "about"
+  }
   const activeLink = document.querySelector(`nav a[href="#${currentSection}"]`);
     if (activeLink) {
         activeLink.classList.add('active');
@@ -94,4 +96,11 @@ function isPageScrolledToBottom() {
 
   // Check if the sum of current scroll position and visible height is close to the total height
   return Math.abs(scrollableHeight - (currentScrollPosition + windowHeight)) <= 1;
+}
+
+function isPageScrolledToTop() {
+  const currentScrollPosition = window.scrollY || window.pageYOffset; // Current scroll position
+
+  // Check if the sum of current scroll position and visible height is close to the total height
+  return currentScrollPosition === 0;
 }
