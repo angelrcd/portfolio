@@ -66,7 +66,7 @@ const skills = [
       },
       {
         name: "Microsoft SQL Server",
-        iconUrl: "assets/skill-icons/mssql.png"
+        iconUrl: "assets/skill-icons/mssql.svg"
       },
       {
         name: "MySQL",
@@ -95,7 +95,7 @@ const skills = [
       },
       {
         name: "NPM",
-        iconUrl: "assets/skill-icons/npm.png"
+        iconUrl: "assets/skill-icons/npm.svg"
       },
       {
         name: "Git",
@@ -107,7 +107,7 @@ const skills = [
       },
       {
         name: "Docker",
-        iconUrl: "assets/skill-icons/docker.png"
+        iconUrl: "assets/skill-icons/docker.svg"
       },
       {
         name: "Nginx",

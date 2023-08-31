@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -45,6 +46,7 @@ html {
 body {
   background-color: var(--bg-color-dark);
   color: var(--font-color-dark);
+  font-family: 'Roboto', sans-serif;
 }
 
 a, a:visited, a:focus {

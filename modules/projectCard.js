@@ -2,7 +2,7 @@ const projects = [
   {
     name: "Connect Four",
     description: "Player vs player connect four game.",
-    imageUrl: "assets/project-thumbnails/connect-four.png",
+    imageUrl: "assets/project-thumbnails/connect-four",
     details: [
       "Pure HTML, CSS and Javascript.",
       "No frameworks or npm packages.",
@@ -18,7 +18,7 @@ const projects = [
   {
     name: "Todo App",
     description: "Maintain and keep track of your day-to-day tasks.",
-    imageUrl: "assets/project-thumbnails/todo-app.png",
+    imageUrl: "assets/project-thumbnails/todo-app",
     details: [
       "Pure HTML, CSS and Javascript.",
       "No frameworks or npm packages.",
@@ -35,7 +35,7 @@ const projects = [
   {
     name: "Weather app",
     description: 'Weather forecast site using <a target="_blank" href="https://www.weatherapi.com/">Weather API</a>',
-    imageUrl: "assets/project-thumbnails/weather-app.png",
+    imageUrl: "assets/project-thumbnails/weather-app",
     details: [
       "Pure HTML, CSS and Javascript, no frameworks.",
       "Calls made using native fetch API.",
@@ -50,7 +50,7 @@ const projects = [
   {
     name: "Battleship",
     description: "Play battleship against the computer.",
-    imageUrl: "assets/project-thumbnails/battleship.png",
+    imageUrl: "assets/project-thumbnails/battleship",
     details: [
       "Pure HTML, CSS and Javascript.",
       "Test Driven Development, test suite written on vitest.",
@@ -64,7 +64,7 @@ const projects = [
   {
     name: "Knight Travails",
     description: "Algorithm practice. It shows the shortest possible way a chess knight can make to get from one square to another.",
-    imageUrl: "assets/project-thumbnails/knight-travails.png",
+    imageUrl: "assets/project-thumbnails/knight-travails",
     details: [
       "Search tree algorithm practice.",
       "It treats all the possible moves a knight could make from it's current position as childrens of a tree. Then to search for the goal square, it traverses the tree in level order.",
@@ -78,7 +78,7 @@ const projects = [
   {
     name: "Binary Search Tree",
     description: "Algorithm practice. Binary search tree implemented in Javascript.",
-    imageUrl: "assets/project-thumbnails/binary-search-tree.png",
+    imageUrl: "assets/project-thumbnails/binary-search-tree",
     details: [
       "Binary Search tree algorithm practice.",
       "Insert new nodes, and delete them.",
@@ -93,7 +93,7 @@ const projects = [
   {
     name: "Memory game",
     description: "Match pair memory game.",
-    imageUrl: "assets/project-thumbnails/memory-game.png",
+    imageUrl: "assets/project-thumbnails/memory-game",
     details: [
       "Pure HTML, CSS and Javascript.",
       "Game keeps track of your time and number of moves.",
@@ -154,7 +154,6 @@ function drawProjectCards(projects){
     projectElem.classList.add("project-card");
     projectElem.tabIndex = 0;
     projectElem.ariaExpanded = false;
-
     let detailsList = "";
 
     for (let detail of project.details){
@@ -162,7 +161,10 @@ function drawProjectCards(projects){
     }
 
     projectElem.innerHTML = `
-    <img class="show-card" src="${project.imageUrl}" alt="">
+    <picture>
+      <source srcset="${project.imageUrl}.opti.webp" type="image/webp">
+      <img class="show-card" src="${project.imageUrl}.opti.png" alt="">
+    </picture>
     <div class="project-info">
       <h4 class="show-card">${project.name}</h4>
       <p>${project.description}</p>
