@@ -1,5 +1,33 @@
 const projects = [
   {
+    name: "Pokemon memory game",
+    description: 'Memory game made using <a target="_blank" href="https://pokeapi.co/">PokeAPI</a>',
+    imageUrl: "assets/project-thumbnails/pokemon-memory",
+    details: [
+      "Made with React.",
+      "HTTP calls using fetch inside useEffect hook.",
+      "Tailwind for styling.",
+    ],
+    link: {
+      access: "https://snazzy-cranachan-33b655.netlify.app/",
+      github: "https://github.com/angelrcd/odin-memory-card"
+    }
+  },
+  {
+    name: "CV App",
+    description: "Create CV app.",
+    imageUrl: "assets/project-thumbnails/cv-app",
+    details: [
+      "Made with React.",
+      "Pure CSS.",
+      "Can upload photo and edit text with forms",
+    ],
+    link: {
+      access: "https://bejewelled-torrone-d475b6.netlify.app/",
+      github: "https://github.com/angelrcd/odin-cv-application"
+    }
+  },
+  {
     name: "Connect Four",
     description: "Player vs player connect four game.",
     imageUrl: "assets/project-thumbnails/connect-four",
